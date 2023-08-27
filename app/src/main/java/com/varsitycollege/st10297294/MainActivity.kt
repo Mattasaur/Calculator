@@ -52,9 +52,9 @@ class MainActivity : AppCompatActivity() {
             var addNum1 = num1.text.toString().toDouble()
             var addNum2 = num2.text.toString().toDouble()
             var result = addNum1 / addNum2
-            if (addNum2 == 0.0){
-                answerView.text = "Cannot Divide by 0"
-                Toast.makeText(this,"Error!",Toast.LENGTH_SHORT).show()
+                if (addNum2 == 0.0){
+                 answerView.text = "Cannot Divide by 0"
+                 Toast.makeText(this,"Error!",Toast.LENGTH_SHORT).show()
             } else
             answerView.text = "$addNum1 ÷ $addNum2 = $result"
         }
