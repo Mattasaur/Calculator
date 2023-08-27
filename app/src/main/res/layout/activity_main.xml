@@ -18,14 +18,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="25sp"
-            android:paddingLeft="10sp"
-            android:textSize="24sp"
+            android:paddingTop="15sp"
             android:text="Calculator"
             android:textAlignment="center"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="563dp" />
+
     </LinearLayout>
 
     <TextView
@@ -36,19 +38,20 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.189" />
 
+    <!--Buttons for diff functions (Add,Sub,Div,etc)-->
     <EditText
         android:id="@+id/num1"
         android:layout_width="48sp"
         android:layout_height="48sp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="124dp"
         android:ems="10"
-        android:hint="1-10"
+        android:hint="0"
         android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/pleaseInput"
         app:layout_constraintTop_toTopOf="parent" />
@@ -57,23 +60,91 @@
         android:id="@+id/num2"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="124dp"
         android:ems="10"
-        android:hint="1-10"
+        android:hint="0"
         android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/pleaseInput"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
-        android:text="Button"
+        android:text="Addition"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pleaseInput" />
+    <Button
+        android:id="@+id/subtractButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subtraction"
+        app:layout_constraintTop_toBottomOf="@+id/addButton"
+        tools:layout_editor_absoluteX="150dp" />
+    <Button
+        android:id="@+id/multipyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Multiplication"
+        app:layout_constraintTop_toBottomOf="@+id/subtractButton"
+        tools:layout_editor_absoluteX="150dp" />
+    <Button
+        android:id="@+id/divButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Division"
+        app:layout_constraintTop_toBottomOf="@+id/multipyButton"
+        tools:layout_editor_absoluteX="150dp" />
+    <Button
+        android:id="@+id/sqButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Square Root"
+        app:layout_constraintTop_toBottomOf="@+id/divButton"
+        tools:layout_editor_absoluteX="150dp" />
+    <Button
+        android:id="@+id/pwButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Powers"
+        app:layout_constraintTop_toBottomOf="@+id/sqButton"
+        tools:layout_editor_absoluteX="150dp"/>
+
+    <!--Layout for answers in code-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+
+    <TextView
+        android:id="@+id/answerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25sp"
+        android:text="Answer"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="536dp" />
+
+    <TextView
+        android:id="@+id/answerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/answerText"
+        android:text="TEST"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="577dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="652dp"
+        tex/>
 
 
+</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
