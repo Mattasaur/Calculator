@@ -6,7 +6,6 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlin.math.sqrt
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         divButton.setOnClickListener {
             var addNum1 = num1.text.toString().toDouble()
             var addNum2 = num2.text.toString().toDouble()
-            var result = addNum1 / addNum2
+            val result = addNum1 / addNum2
                 if (addNum2 == 0.0){
                  answerView.text = "Cannot Divide by 0"
                  Toast.makeText(this,"Error!",Toast.LENGTH_SHORT).show()
@@ -61,8 +60,11 @@ class MainActivity : AppCompatActivity() {
         /*SquareRoot Button code*/
         sqButton.setOnClickListener {
             var addNum1 = num1.text.toString().toDouble()
-            var result = sqrt(addNum1).toInt()
-            answerView.text = "Sqrt($addNum1)= $result X $result"
+            var addNum2 = num2.text.toString().toDouble()
+            var result = addNum1*addNum2
+            if (addNum1 < 0.0){
+                answerView.text = "Sqrt($result i)= $addNum1 X $addNum2"
+            } else answerView.text = "Sqrt($result)= $addNum1 X $addNum2"
         }
         /*Powers Button code*/
         pwButton.setOnClickListener {
