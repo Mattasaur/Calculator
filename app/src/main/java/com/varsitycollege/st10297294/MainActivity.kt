@@ -66,8 +66,8 @@ class MainActivity : AppCompatActivity() {
         sqButton.setOnClickListener {
             var addNum1 = num1.text.toString().toDouble()
             var result = sqrt(addNum1).toDouble()
-            var sqrChk = sqrt(addNum1*-1).toDouble()
-                if (addNum1 < 0.0){
+                var sqrChk = sqrt(addNum1*-1).toDouble()
+                    if (addNum1 < 0.0){
                 answerView.text = "Sqrt($addNum1)= $sqrChk i"
                 Toast.makeText(this,"No Errors",Toast.LENGTH_SHORT).show()
             } else answerView.text = "Sqrt($addNum1)=$result"
