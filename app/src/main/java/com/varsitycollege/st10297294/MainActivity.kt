@@ -6,6 +6,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.math.sqrt
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
             var addNum2 = num2.text.toString().toDouble()
             var result = addNum1 + addNum2
             answerView.text = "$addNum1 + $addNum2 = $result"
+            Toast.makeText(this,"No Errors",Toast.LENGTH_SHORT).show()
         }
 
         /*subtract Button code*/
@@ -37,6 +39,7 @@ class MainActivity : AppCompatActivity() {
             var addNum2 = num2.text.toString().toDouble()
             var result = addNum1 - addNum2
             answerView.text = "$addNum1 - $addNum2 = $result"
+            Toast.makeText(this,"No Errors",Toast.LENGTH_SHORT).show()
         }
 
         /*multiply Button code*/
@@ -45,6 +48,7 @@ class MainActivity : AppCompatActivity() {
             var addNum2 = num2.text.toString().toDouble()
             var result = addNum1 * addNum2
             answerView.text = "$addNum1 X $addNum2 = $result"
+            Toast.makeText(this,"No Errors",Toast.LENGTH_SHORT).show()
         }
         /*Divide Button code*/
         divButton.setOnClickListener {
@@ -56,30 +60,38 @@ class MainActivity : AppCompatActivity() {
                  Toast.makeText(this,"Error!",Toast.LENGTH_SHORT).show()
             } else
             answerView.text = "$addNum1 ÷ $addNum2 = $result"
+            Toast.makeText(this,"No Errors",Toast.LENGTH_SHORT).show()
         }
         /*SquareRoot Button code*/
         sqButton.setOnClickListener {
             var addNum1 = num1.text.toString().toDouble()
-            var addNum2 = num2.text.toString().toDouble()
-            var result = addNum1*addNum2
-            if (addNum1 < 0.0){
-                answerView.text = "Sqrt($result i)= $addNum1 X $addNum2"
-            } else answerView.text = "Sqrt($result)= $addNum1 X $addNum2"
+            var result = sqrt(addNum1).toDouble()
+            var sqrChk = sqrt(addNum1*-1).toDouble()
+                if (addNum1 < 0.0){
+                answerView.text = "Sqrt($addNum1)= $sqrChk i"
+                Toast.makeText(this,"No Errors",Toast.LENGTH_SHORT).show()
+            } else answerView.text = "Sqrt($addNum1)=$result"
+            Toast.makeText(this,"No Errors",Toast.LENGTH_SHORT).show()
         }
         /*Powers Button code*/
         pwButton.setOnClickListener {
-            var addNum1 = num1.text.toString().toDouble()
+            var addNum1 = num1.text.toString().toInt()
             var addNum2 = num2.text.toString().toInt()
-            var pwrStore: Double = 0.0
-            var result: Double = 0.0
-            for(pwrStore in 0 until addNum2)
+            var pwrStore = num2.text.toString().toInt()
+            var result: Long = 1
+            while (addNum2 != 0)
             {
-                result=addNum1*(pwrStore*addNum1)
+                result *= addNum1.toLong()
+                --addNum2
             }
-
-            answerView.text = "$addNum1^$addNum2 = $result"
+            answerView.text = "$addNum1^$pwrStore = $result"
+            Toast.makeText(this,"No Errors",Toast.LENGTH_SHORT).show()
         }
     }
 }
+
+
+
+
 
 
