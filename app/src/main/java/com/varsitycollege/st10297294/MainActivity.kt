@@ -1,5 +1,6 @@
 package com.varsitycollege.st10297294
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.sqrt
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var statFuncBtn: Button
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -23,7 +25,12 @@ class MainActivity : AppCompatActivity() {
         val divButton = findViewById<Button>(R.id.divButton)
         val sqButton = findViewById<Button>(R.id.sqButton)
         val pwButton = findViewById<Button>(R.id.pwButton)
-        val statFunc = findViewById<Button>(R.id.statFuncButton)
+        var statFuncBtn = findViewById<Button>(R.id.statFuncButton)
+
+        /*StatFuncButton*/
+        statFuncBtn.setOnClickListener {
+            var intent = Intent(this,StatFunc::class.java)
+            startActivity(intent)}
 
         /*Add Button code*/
         addButton.setOnClickListener {
@@ -89,10 +96,10 @@ class MainActivity : AppCompatActivity() {
             answerView.text = "$addNum1^$pwrStore = $result"
             Toast.makeText(this,"No Errors",Toast.LENGTH_SHORT).show()
         }
-        /*StatFuncButton*/
+
+        }
 
 
-    }
 }
 
 
