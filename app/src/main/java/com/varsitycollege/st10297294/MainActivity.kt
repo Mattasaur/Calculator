@@ -55,12 +55,13 @@ class MainActivity : AppCompatActivity() {
             var addNum1 = num1.text.toString().toDouble()
             var addNum2 = num2.text.toString().toDouble()
             val result = addNum1 / addNum2
-                if (addNum2 == 0.0){
+            if (addNum2 == 0.0){
                  answerView.text = "Cannot Divide by 0"
                  Toast.makeText(this,"Error!",Toast.LENGTH_SHORT).show()
-            } else
-            answerView.text = "$addNum1 ÷ $addNum2 = $result"
-            Toast.makeText(this,"No Errors",Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this,"No Errors",Toast.LENGTH_SHORT).show()
+            answerView.text = "$addNum1 ÷ $addNum2 = $result"}
+
         }
         /*SquareRoot Button code*/
         sqButton.setOnClickListener {
