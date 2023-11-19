@@ -68,48 +68,63 @@
 
     <Button
         android:id="@+id/addButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="132dp"
         android:text="Addition"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pleaseInput" />
+        app:layout_constraintTop_toBottomOf="@+id/calculatorHeader" />
+
     <Button
         android:id="@+id/subtractButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="24dp"
         android:text="Subtraction"
-        app:layout_constraintTop_toBottomOf="@+id/addButton"
-        tools:layout_editor_absoluteX="150dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculatorHeader" />
+
     <Button
         android:id="@+id/multipyButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
         android:text="Multiplication"
-        app:layout_constraintTop_toBottomOf="@+id/subtractButton"
-        tools:layout_editor_absoluteX="150dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addButton" />
+
     <Button
         android:id="@+id/divButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
         android:text="Division"
-        app:layout_constraintTop_toBottomOf="@+id/multipyButton"
-        tools:layout_editor_absoluteX="150dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtractButton" />
+
     <Button
         android:id="@+id/sqButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
         android:text="Square Root"
-        app:layout_constraintTop_toBottomOf="@+id/divButton"
-        tools:layout_editor_absoluteX="150dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multipyButton" />
+
     <Button
         android:id="@+id/pwButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
         android:text="Powers"
-        app:layout_constraintTop_toBottomOf="@+id/sqButton"
-        tools:layout_editor_absoluteX="150dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divButton" />
 
     <TextView
         android:id="@+id/answerText"
