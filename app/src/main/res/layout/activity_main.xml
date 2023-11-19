@@ -10,7 +10,7 @@
         android:id="@+id/calculatorHeader"
         android:layout_width="match_parent"
         android:layout_height="79dp"
-        android:background="#7851a9"
+        android:background="#7C4DFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +64,8 @@
         app:layout_constraintStart_toEndOf="@+id/pleaseInput"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--Layout for answers in code-->
+
     <Button
         android:id="@+id/addButton"
         android:layout_width="match_parent"
@@ -108,8 +110,6 @@
         android:text="Powers"
         app:layout_constraintTop_toBottomOf="@+id/sqButton"
         tools:layout_editor_absoluteX="150dp"/>
-
-    <!--Layout for answers in code-->
 
     <TextView
         android:id="@+id/answerText"
