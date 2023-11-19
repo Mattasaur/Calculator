@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val divButton = findViewById<Button>(R.id.divButton)
         val sqButton = findViewById<Button>(R.id.sqButton)
         val pwButton = findViewById<Button>(R.id.pwButton)
+        val statFunc = findViewById<Button>(R.id.statFuncButton)
 
         /*Add Button code*/
         addButton.setOnClickListener {
@@ -88,6 +89,9 @@ class MainActivity : AppCompatActivity() {
             answerView.text = "$addNum1^$pwrStore = $result"
             Toast.makeText(this,"No Errors",Toast.LENGTH_SHORT).show()
         }
+        /*StatFuncButton*/
+
+
     }
 }
 
